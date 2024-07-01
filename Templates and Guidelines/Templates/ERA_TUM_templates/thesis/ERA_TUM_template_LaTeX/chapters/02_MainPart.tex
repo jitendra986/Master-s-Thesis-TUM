@@ -1,0 +1,258 @@
+% !TEX root = ../thesis.tex
+% CHAPTER_02
+\chapter{How to Use \LaTeX~ for Your Thesis}
+\label{chap:fundamentals}
+
+
+%________________________________________
+\section{Chapters, Sections and Subsections}
+\label{sec:fa_special_poly}
+
+You can use the following types of headings: chapters, sections and subsections. Any heading should not go over more than one line.You might want to capitalize the headings of chapters and sections, but not the headings of subsections. Note: Whatever you do, be consistent.
+
+\subsection{A subsection}\label{ssec:fa_legendre_poly}
+As a rule of thumb, there should be approximately two headings per page; 
+but this is really just a rule of thumb.
+
+\subsubsection{A subsubsection}
+If you need a further subdivision, you can use subsubsections. However, they will not be numerated and will not appear in the table of context.
+
+\subsection{Another subsection}\label{sec:fa_special_poly2}
+A section or subsection should never stand alone. If there is a section \ref{sec:fa_special_poly}, there must be a section \ref{sec:fa_special_poly3}. The same holds, of course, for subsections: \ref{ssec:fa_legendre_poly} never without \ref{sec:fa_special_poly2}.
+
+\subsection{Some comments}
+Define abbreviations before you use them. Try to avoid adjectives as much as possible; and avoid words like 'very much', 'very good', 'a lot', 'excellent'. You are not in marketing - try to write precise. You should also try to write clear and as short as possible.
+
+
+
+%__________________________________________
+\section{How to Cite in LaTeX}
+\label{sec:fa_special_poly3}
+
+Do not forget to cite. For example: You might want to read the excellent paper on the Expansion Optimal Linear Estimation (EOLE)\index{Expansion Optimal Linear Estimation} method introduced in \cite{li_and_derkiureghian_1993}. Maybe you want to have a look at the file \emph{literature/references.bib}, to fully understand how citations work in LaTeX.
+
+%_________________________________________
+\section{Equations}
+
+You will need equations. The good thing: \LaTeX is just perfect for the use of equations.
+
+The \emph{Legendre polynomials} $\{L_n(\xi)\}_{n=0}^\infty$ with $\xi \in [-1,1]$ solve the Legendre differential equation. The first five Legendre polynomials are:
+\begin{align}
+  L_0(\xi) &= 1  \nonumber \\
+  L_1(\xi) &= \xi  \nonumber \\
+  L_2(\xi) &= \frac{1}{2}\left(3\xi^2-1\right) \nonumber \\
+  L_3(\xi) &= \frac{1}{2}\left(5\xi^3-3\xi\right) \nonumber \\
+  L_4(\xi) &= \frac{1}{8}\left(35\xi^4-30\xi^2+3\right) \nonumber \\
+  L_5(\xi) &= \frac{1}{8}\left(63\xi^5-70\xi^3+15\xi\right)
+\end{align}
+
+One way to express the polynomials is by using Rodrigues's formula (e.g. see \cite{arens_2009}):
+\begin{equation}
+  L_n(\xi) = \frac{1}{2^n \, n!}\frac{\dd^n}{\dd \xi^n} (\xi^2-1)^n
+  \label{eq:ex}
+\end{equation}
+
+There is a lot more you can do; but since you know how to google \ldots Maybe you would like to give a reference to equation~\ref{eq:ex}? I think you are beginning to understand how things work in LaTeX, aren't you?
+
+%_________________________________________
+\section{Figures}
+\label{ssec:fa_lagrange_poly}
+
+Under Linux you might want to use the command \emph{epstopdf} to convert the \emph{*.eps} files to \emph{*.pdf} files. Since it is learning by doing, I stop writing at this point and suggest that you have a look in the folder mentioned above.
+
+So, how about a simple figure? Just make sure to transform the file to a \emph{pdf} file after you are done.
+\begin{figure}
+  \begin{center}
+   \includegraphics[width=0.65\textwidth]{TUM_Uhrenturm}
+    \caption{Definition of the nodes and edges of a face and orientation of the local coordinate system}
+    \label{fig:2Del}
+  \end{center}
+\end{figure}
+
+
+%_________________________________________
+\section{Tables}
+\label{ssec:hosf_2D_sf}
+
+Of course, you can use tables in your work as well; but please, do me the favor and consult Google. Remember: LaTeX is not about formating stuff. So, please do not spend time on how to format stuff; spend time writing!
+
+\begin{table}
+\caption{Size of the eigenvalue problem and time needed to achieve a mean error variance with a value of round $9.034\cdot10^{-2}$;
+two-dimensional example of a plate with a hole; $M=8$}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} l r  r l }
+    \hline
+    Method & $N$ & time & RF info \\
+    \hline
+    EOLE 				& 1040 		& $0.10s$ 	& 81 points per $m^2$\\
+    FC-KL ($N_{el}=1$, tensor space) 	& 49 		& $1.7s$ 	& $p_{max}=6$ \\
+    FC-KL ($N_{el}=1$, trunk space) 	& 47 		& $2.1s$ 	& $p_{max}=8$ \\
+    FC-KL ($N_{el}=4$, tensor space) 	& 81 		& $3.7s$ 	& $p_{max}=4$ \\
+    FC-KL ($N_{el}=4$, trunk space) 	& 69 		& $4.5s$ 	& $p_{max}=5$ \\
+    FC-KL ($N_{el}=16$, tensor space) 	& 169 		& $15.4s$ 	& $p_{max}=3$ \\
+    FC-KL ($N_{el}=16$, trunk space) 	& 105 		& $14.2s$ 	& $p_{max}=3$ \\
+    \hline
+  \end{tabular*}
+\label{tab:2dex_2dhole_meanvar_m8_time1}
+\end{table}
+
+
+\section{Unterkapitelüberschrift}
+\subsection[]{Absatzüberschrift}
+
+Dies ist die Vorlage für eine wissenschaftliche Arbeit nach dem Corporate Design der Technischen Universität München (TUM). Die Vorlage ist für "`TeX Live 2015"' kompatibel.
+
+Bitte geben Sie Ihren individuellen Text an den vorgesehenen Stellen ein und beachten Sie die Formatvorgaben des jeweiligen Lehrstuhls oder der Prüfenden zum inhaltlichen und formalen Aufbau der wissenschaftlichen Arbeit. Achten Sie grundsätzlich auf ein angenehmes Erscheinungsbild für den Leser und dass ein 1,5-facher Zeilenabstand und am Rand genügend Platz für Korrekturen eingehalten wird\footnote{Bitte beachten Sie die Zitationsvorgaben Ihres Prüfers.}.
+
+Grundsätzlich sind die Schriftarten Arial und Times New Roman, sowie die Neue Helvetica zulässig. Der Text ist links ausgerichtet und in Blocksatz gesetzt. Auszeichnungen der Schrift können durch Fettung, Schrägstellung und Unterstreichung erfolgen. Farbige Schrift sollte nur in Ausnahmefällen oder Grafiken zum Einsatz kommen.
+\begin{figure}[!ht]
+\noindent\hspace{0.5mm}\includegraphics[width=12cm]{Desert.jpg}
+\caption{Titel, Autor}
+\end{figure}
+
+Passen Sie gegebenenfalls die Ränder an die Vorgaben Ihres Prüfers an und beachten Sie dabei, dass das Logo der TUM sich oben rechts innerhalb der Ränder, auf der Titelseite befindet. Für die Titelseiten stehen separate
+Vorlagen zur Verfügung.
+
+
+
+\subsection[]{Aufzählungen}
+\begin{itemize}
+\item Dies ist die Standardaufzählung
+    \begin{itemize}
+    \item Dies ist die nächste Ebene der Aufzählung
+    \end{itemize}
+\end{itemize}
+
+
+\subsection[]{Nummerierungen}
+\begin{enumerate}
+\item Erster Punkt der Nummerierungen
+    \begin{enumerate}
+    \item Unterpunkt der Nummerierungen
+    \end{enumerate}
+\end{enumerate}
+
+
+% \addchap{Tabellenvarianten}
+% 
+% \vspace{22mm}
+% \section*{Überschrift Tabelle 1}
+% 
+% \begin{table}[!h]
+% \begin{tabularx}{\textwidth + 5pt}{@{\hspace{3pt}} M | @{\hspace{3pt}} M}
+% \multicolumn{2}{@{}X}{%
+%     \begin{tabularx}{\textwidth}{@{\hspace{3pt}} M @{\hspace{14.5pt}} M}
+%     \textbf{Spalte 1} & \textbf{Spalte 2}
+%     \end{tabularx}%
+% } \\
+% \hline
+% Nummer 1 & Nummer 2 \\
+% \hline
+% Nummer 1 & Nummer 2 \\
+% \hline
+% Nummer 1 & Nummer 2 \\
+% \hline
+% \end{tabularx}
+% 
+% \caption{Beschreibung}
+% \end{table}
+% 
+% 
+% \vspace{\parskip}
+% \section*{Überschrift Tabelle 2}
+% 
+% \begin{table}[!h]
+% \hspace{-5pt}
+% \begin{tabularx}{\textwidth + 5pt}{| @{\hspace{3pt}} M | @{\hspace{3pt}} M |}
+% \hline
+% \textbf{Spalte 1} & \textbf{Spalte 2} \\
+% \hline
+% Nummer 1 & Nummer 2 \\
+% \hline
+% Nummer 1 & Nummer 2 \\
+% \hline
+% Nummer 1 & Nummer 2 \\
+% \hline
+% \end{tabularx}
+% \caption{}
+% \end{table}
+% 
+% 
+% \vspace{\parskip}
+% \section*{Überschrift Tabelle 3}
+% 
+% \begin{table}[!h]
+% \begin{tabularx}{\textwidth}{@{} M M}
+% \textbf{Spalte 1} & \textbf{Spalte 2} \\
+% Nummer 1 & Nummer 2 \\
+% Nummer 1 & Nummer 2 \\
+% Nummer 1 & Nummer 2 \\
+% \end{tabularx}
+% \caption{}
+% \end{table}
+% 
+% 
+% 
+% \section{Tabellenvarianten 2}
+% 
+% \vspace{22mm}
+% \section*{Überschrift Tabelle 1}
+% 
+% \begin{table}[!h]
+% \fontsize{9pt}{13pt}\selectfont
+% %\renewcommand{\arraystretch}{1.8}
+% \hspace{-5pt}
+% \begin{tabularx}{\textwidth + 5pt}{@{\hspace{3pt}} M | @{\hspace{3pt}} M}
+% \multicolumn{2}{@{}X}{%
+%     \begin{tabularx}{\textwidth}{@{\hspace{3pt}} M @{\hspace{14.5pt}} M}
+%     \textbf{Spalte 1} & \textbf{Spalte 2}
+%     \end{tabularx}%
+% } \\
+% \hline
+% Nummer 1,\newline\,mehrzeilig in Schriftgröße 9 pt & Nummer 2 \\
+% \hline
+% Nummer 1 & Nummer 2 \\
+% \hline
+% Nummer 1 & Nummer 2 \\
+% \hline
+% \end{tabularx}
+% 
+% \caption{}
+% \end{table}
+
+
+% \vspace{\parskip}
+% \section*{Überschrift Tabelle 2}
+% 
+% \begin{table}[!h]
+% \fontsize{9pt}{13pt}\selectfont
+% \hspace{-5pt}
+% %\renewcommand{\arraystretch}{1.8}
+% \begin{tabularx}{\textwidth + 5pt}{| @{\hspace{3pt}} M | @{\hspace{3pt}} M |}
+% \hline
+% \textbf{Spalte 1} & \textbf{Spalte 2} \\
+% \hline
+% Nummer 1 & Nummer 2 \\
+% \hline
+% Nummer 1 & Nummer 2 \\
+% \hline
+% Nummer 1 & Nummer 2 \\
+% \hline
+% \end{tabularx}
+% \caption{}
+% \end{table}
+% 
+% 
+% \vspace{\parskip}
+% \section*{Überschrift Tabelle 3}
+% 
+% \begin{table}[!h]
+% \fontsize{9pt}{13pt}\selectfont
+% %\renewcommand{\arraystretch}{1.8}
+% \begin{tabularx}{\textwidth}{@{} M M}
+% \textbf{Spalte 1} & \textbf{Spalte 2} \\
+% Nummer 1 & Nummer 2 \\
+% Nummer 1 & Nummer 2 \\
+% Nummer 1 & Nummer 2 \\
+% \end{tabularx}
+% \caption{}
+% \end{table}

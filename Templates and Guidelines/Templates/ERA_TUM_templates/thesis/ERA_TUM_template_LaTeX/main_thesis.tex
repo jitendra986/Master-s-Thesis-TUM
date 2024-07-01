@@ -1,0 +1,62 @@
+\documentclass[fontsize=11pt, twoside=off]{scrbook} 
+% Dokumentenklasse: KOMA-Script Book
+
+\input{preamble.tex} % !!! NICHT ENTFERNEN !!!
+\input{preamble_settings.tex} % !!! NICHT ENTFERNEN !!!
+
+%------ Please fill in! -----
+\renewcommand{\Thema}{} %{Thema der Arbeit (optional)}
+\newcommand{\DAtype}{Master's thesis submitted for the degree of: \\[1ex] 
+\textbf{Master of Science program Civil Engineering.}\\[1ex]
+Department of Civil, Geo and Environmental Engineering. \\Technische Universität München.}
+\newcommand{\DAthema}{Unnecessarily Complicated Research Title\\[1.5ex]\LARGE{An Exploration of Complexity}}
+\newcommand{\DAautor}{Max Mustermann}
+\newcommand{\Matrikel}{0070000}
+\newcommand{\DAort}{München}
+\newcommand{\DAautorAnschrift}{Mustermann's address, 80333 München}
+\newcommand{\DAautoremail}{max.mustermann@tum.de}
+\newcommand{\DAprofessor}{Univ.-Prof. Dr. Daniel Straub}
+\newcommand{\DAbetreuer}{M.Sc. John Doe}
+\newcommand{\DAausgabe}{May 01, 2017}
+\newcommand{\DAabgabe}{October 31, 2017}
+\newcommand{\DALehrstuhl}{Professorship of Engineering Risk Analysis}
+\newcommand{\AdresseLehrstuhl}{Engineering Risk Analysis Group\\
+Department of Civil, Geo and Environmental Engineering\\
+Technische Universität München\\
+Arcisstraße 21\\
+80333 München}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+%---------- front ---------------------
+\input{chapters/00a_titlepage}
+\input{chapters/00b_declaration}
+\input{chapters/00c_abstract}
+\input{chapters/00d_acknowledgements}
+
+%---------- List ---------------------
+\renewcommand{\contentsname}{Table of Contents}
+\tableofcontents % Inhaltsverzeichnis
+
+\addcontentsline{toc}{chapter}{List of Figures}
+\listoffigures % Abbildungsverzeichnis
+
+\addcontentsline{toc}{chapter}{List of Tables}
+\listoftables % Tabellenverzeichnis
+\onehalfspacing
+
+%---------- Contents ----------
+\input{chapters/01_Introduction}
+\input{chapters/02_MainPart}
+
+%---------- References ----------
+\cleardoublepage
+\addcontentsline{toc}{chapter}{Bibliography}
+\printbibliography
+%
+\cleardoublepage
+\addcontentsline{toc}{chapter}{Index}
+\printindex
+
+\end{document}

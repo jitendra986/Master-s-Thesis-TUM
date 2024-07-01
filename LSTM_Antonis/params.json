@@ -1,0 +1,15 @@
+{
+  "input_dim": 25,
+  "dummy_dim": 3,
+  "model_dim": 64,
+  "num_heads": 4,
+  "num_layers": 4,
+  "seq_length": 50,
+  "num_classes": 3,
+  "dropout_rate": 0.3,
+  "learning_rate": 0.001,
+  "batch_size": 32,
+  "num_epochs": 10,
+  "weight_decay": 1e-5,
+  "patience": 10
+}

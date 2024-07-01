@@ -1,0 +1,98 @@
+\usepackage{scrlayer-scrpage} % Anpassbare Kopf- und Fußzeilen
+
+\usepackage[utf8]{inputenc} % Textkodierung: UTF-8
+\usepackage[T1]{fontenc} % Zeichensatzkodierung
+
+\usepackage[ngerman,english]{babel} % Deutsche Lokalisierung
+
+% Schriftart Helvetica:
+\usepackage[scaled]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage{graphicx} % Grafiken
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{csquotes}
+\usepackage{mathtools}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+\usepackage{textcomp}
+\usepackage{booktabs} 		%für tolle tabellen
+
+% Silbentrennung:
+\usepackage{hyphenat}
+\hyphenation{TUM in-te-res-siert} % Eigene Silbentrennung
+%\tolerance 2414
+%\hbadness 2414
+%\emergencystretch 1.5em
+%\hfuzz 0.3pt
+%\widowpenalty=10000     % Hurenkinder
+%\clubpenalty=10000      % Schusterjungen
+%\vfuzz \hfuzz
+
+\usepackage[onehalfspacing]{setspace} % 1,5facher Zeilenabstand
+\usepackage{calc} % Berechnungen
+\usepackage{enumitem} % Mehr Kontrolle über itemize-, enumerate- und description-Umgebungen
+\usepackage{relsize} % Schriftgröße in Abhängigkeit von aktueller anpassen
+\usepackage{tabularx} % Flexiblere Tabellen
+\usepackage{caption} % Anpassen von Beschriftungen
+\usepackage{makeidx}
+\usepackage{lipsum}
+
+% Nummerierung von Abbildungen & Tabellen durchgängig, statt nach Kapiteln:
+\usepackage{chngcntr}
+\counterwithout{figure}{chapter}
+\counterwithout{table}{chapter}
+
+% Abkürzungen, Glossare:
+% \usepackage[%
+%     xindy,% xindy zum Indexieren verwenden
+%     acronym,% Separates Akronym-Verzeichnis
+%     nopostdot,% Kein Punkt am Ende einer Beschreibung im Glossar
+% ]{glossaries}
+
+\def\changemargin#1#2{\list{}{\rightmargin#2\leftmargin#1}\item[]}
+\let\endchangemargin=\endlist 
+
+% Spezielle Befehlsdefinitionen:
+\newcommand{\Thema}{}
+
+\usepackage{xcolor}
+\definecolor{TUMBlau}{RGB}{0,101,189} % Pantone 300
+\definecolor{TUMBlauDunkel}{RGB}{0,82,147} % Pantone 301
+\definecolor{TUMBlauHell}{RGB}{152,198,234} % Pantone 283
+\definecolor{TUMBlauMittel}{RGB}{100,160,200} % Pantone 542
+\definecolor{TUMElfenbein}{RGB}{218,215,203} % Pantone 7527 -Elfenbein
+\definecolor{TUMGruen}{RGB}{162,173,0} % Pantone 383 - Grün
+\definecolor{TUMOrange}{RGB}{227,114,34} % Pantone 158 - Orange
+\definecolor{TUMGrau}{gray}{0.6} % Grau 60%
+
+\newcommand{\suchthat}{\;\ifnum\currentgrouptype=16 \middle\fi|\;}
+\newcommand{\norm}[1]{\left\Vert#1\right\Vert}
+\newcommand{\abs}[1]{\left\vert#1\right\vert}
+\newcommand{\iprod}[1]{\left\langle#1\right\rangle}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\BibLaTeX}{{Bib}\LaTeX~}
+\newcommand{\memoir}{\text{Memoir}~}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\E}{\mathop{{}\mathbb{E}}}%\mathop{{}\mathbb{E}}
+\newcommand{\II}[2]{{\mathbbm{I}_{#1}\left[#2\right]}}
+\newcommand{\cov}{\mathrm{Cov}}
+\newcommand{\var}{\mathrm{Var}}
+\newcommand{\deter}{\mathrm{det}}
+\newcommand{\tran}{\mathsf{T}}
+\newcommand{\matlab}{$\text{MATLAB}^{\text{\textregistered}}$~}
+\newcommand{\ve}[1]{{\boldsymbol{#1}}}
+\newcommand{\rv}[1]{{\uppercase{#1}}}
+
+% Debugging:
+%\usepackage{showframe} % Layout-Boxen anzeigen
+%\usepackage{layout} % Layout-Informationen
+%\usepackage{printlen} % Längenwerte ausgeben
+\makeindex
+
+\usepackage[style= authoryear-comp,backend=bibtex,backref = true,maxbibnames=6]{biblatex}
+
+\usepackage[hidelinks]{hyperref} % Hyperlinks
+
+\graphicspath{{figures/}}
+\addbibresource{references.bib}

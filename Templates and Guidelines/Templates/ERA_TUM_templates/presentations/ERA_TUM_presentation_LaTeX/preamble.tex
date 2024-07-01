@@ -1,0 +1,133 @@
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc} % Zeichensatzkodierung
+
+\usepackage{calc} % Berechnungen
+\usepackage[english]{babel} % Deutsche Lokalisierung
+\usepackage{graphicx} % Grafiken
+\usepackage[export]{adjustbox}
+\usepackage[absolute, overlay]{textpos} % Positionierung
+\usepackage{bbm}
+
+%\usepackage{paralist}
+\usepackage[linesnumbered]{algorithm2e}
+\usepackage{amsmath}
+\usepackage{colortbl}
+%\usepackage{bbold}
+\usepackage[hang,small]{subfigure} 
+\usepackage{graphicx}
+\usepackage[style=numeric-comp,autocite=superscript,backend=bibtex]{biblatex}
+\setbeamertemplate{bibliography item}{}
+\usepackage{lipsum}
+
+% Silbentrennung:
+\usepackage{hyphenat}
+%\tolerance 2414
+%\hbadness 2414
+%\emergencystretch 1.5em
+%\hfuzz 0.3pt
+%\widowpenalty=10000     % Hurenkinder
+%\clubpenalty=10000      % Schusterjungen
+%\vfuzz \hfuzz
+
+% Euro-Symbol:
+\usepackage[gen]{eurosym}
+\DeclareUnicodeCharacter{20AC}{\euro{}}
+
+% Schriftart Helvetica:
+%\useinnertheme{default}
+%\usefonttheme{professionalfonts}
+%\usefonttheme{serif}
+%\renewcommand\mathfamilydefault{\rmdefault}
+\usefonttheme[onlymath]{serif}
+\renewcommand\sfdefault{cmbr}
+
+\usepackage[scaled]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+%\usepackage{mathptmx} % skalierbare Formelschriften
+\usepackage{tabularx}
+\usepackage{multicol} % mehrspaltiger Text
+\usepackage{tikz}
+\usetikzlibrary{arrows, shapes, shapes.multipart, trees, positioning,
+    backgrounds, fit, matrix}
+
+% Diagramme:
+\usepackage{pgfplots}
+\pgfplotsset{compat=default}
+
+% Erweiterbare Fusszeile:
+\newcommand{\PraesentationSchriftgroesseSehrGross}{\fontsize{30}{45}}
+\newcommand{\PraesentationSchriftgroesseGross}{\fontsize{22}{33}}
+\newcommand{\PraesentationSchriftgroesseNormal}{\fontsize{16}{29}}
+\newcommand{\PraesentationSchriftgroesseKlein}{\fontsize{12}{18}}
+\newcommand{\PraesentationSchriftgroesseDreizeiler}{\fontsize{7}{10}}
+\newcommand{\PraesentationSchriftgroesseAufzaehlungszeichen}{\fontsize{10}{15}}
+\newcommand{\PraesentationAbstandAbsatz}{22.1pt}
+\newcommand{\PraesentationPositionKorrekturOben}{-0.75cm}
+\newcommand{\PraesentationBeispieleSchriftgroessen}{30 | 22 | 16 | 12}
+
+    % Blautöne:
+\definecolor{TUMBlau}{RGB}{0,101,189} % Pantone 300
+\definecolor{TUMBlauDunkel}{RGB}{0,82,147} % Pantone 301
+\definecolor{TUMBlauHell}{RGB}{152,198,234} % Pantone 283
+\definecolor{TUMBlauMittel}{RGB}{100,160,200} % Pantone 542
+
+    % Hervorhebung:
+\definecolor{TUMElfenbein}{RGB}{218,215,203} % Pantone 7527 -Elfenbein
+\definecolor{TUMGruen}{RGB}{162,173,0} % Pantone 383 - Grün
+\definecolor{TUMOrange}{RGB}{227,114,34} % Pantone 158 - Orange
+\definecolor{TUMGrau}{gray}{0.6} % Grau 60%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Personenspezifische Informationen
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Für die Person anpassen:
+\newcommand{\PersonAdresse}{%
+    @Adresse@\\%
+    @Plz@~\PersonStadt%
+}
+\newcommand{\PersonTelefon}{@Telefon@}
+\newcommand{\PersonFax}{@Fax@}
+\newcommand{\PersonEmail}{@E-Mail@}
+\newcommand{\PersonWebseite}{@Web@}
+
+\newcommand{\FakultaetAnsprechpartner}{@Ansprechpartner@}
+% Fakultät:
+\newcommand{\EinstellungBankName}{Bayerische Landesbank}
+\newcommand{\EinstellungBankIBAN}{DE10700500000000024866}
+\newcommand{\EinstellungBankBIC}{BYLADEMM}
+\newcommand{\EinstellungSteuernummer}{143/241/80037}
+\newcommand{\EinstellungUmsatzsteuerIdentifikationsnummer}{DE811193231}
+
+\hyphenation{} % eigene Silbentrennung
+
+\newcommand{\suchthat}{\;\ifnum\currentgrouptype=16 \middle\fi|\;}
+\newcommand{\norm}[1]{\left\Vert#1\right\Vert}
+\newcommand{\abs}[1]{\left\vert#1\right\vert}
+\newcommand{\iprod}[1]{\left\langle#1\right\rangle}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\BibLaTeX}{{Bib}\LaTeX~}
+\newcommand{\memoir}{\text{Memoir}~}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\Ex}{\mathop{{}\mathbb{E}}}%\mathop{{}\mathbb{E}}
+\newcommand{\I}{\pmb{\mathbb{I}}}%\mathop{{}\mathbb{E}}
+\newcommand{\II}[2]{{\mathbbm{I}_{#1}\left[#2\right]}}
+\newcommand{\cov}{\mathrm{Cov}}
+\newcommand{\var}{\mathrm{Var}}
+\newcommand{\deter}{\mathrm{det}}
+\newcommand{\tran}{\mathsf{T}}
+\newcommand{\matlab}{$\text{MATLAB}^{\text{\textregistered}}$~}
+\newcommand{\defin}{\textit}
+\newcommand{\intd}{\text{d}}
+\newcommand{\N}{\mathrm{N}}
+\newcommand{\logN}{\mathrm{logN}}
+\newcommand{\diver}{\mathrm{div}}
+\newcommand{\ve}[1]{{\boldsymbol{#1}}}
+\DeclareMathOperator{\argmin}{argmin}
+\DeclareMathOperator{\ble}{BLE}
+\DeclareMathOperator{\enkfip}{EnKF}
+\DeclareMathOperator{\E}{\mathbb{E}}
+\DeclareMathOperator{\Cov}{Cov}
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\iid}{i.i.d.}
+\newcommand{\highlight}[1]{\colorbox{TUMBlauHell}{$\displaystyle #1$}}

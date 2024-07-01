@@ -1,0 +1,65 @@
+% !TeX document-id = {08498b0f-e64e-4e33-b08d-0ab91c51af36}
+% !TeX program = txs:///pdf-chain | txs:///bibtex
+\documentclass[t]{beamer}
+\usepackage[
+    orientation=landscape,
+    size=custom,
+    width=25.4,
+    height=19.05,
+    scale=0.75 %0.63 erzeugt 16pt Schriftgröße
+]{beamerposter}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{preamble.tex} % !!! DATEI ANPASSEN !!!
+
+\graphicspath{{figures/}}
+{\tiny \bibliography{bibfile}}
+%\renewcommand{\footnotesize}{\scriptsize}
+\newcommand{\Datum}{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Nice title\\ \vskip 2cm {\large Nice Conference Title}}
+
+\newcommand{\PersonTitel}{}
+\newcommand{\PersonVorname}{\textbf{Max}}
+\newcommand{\PersonNachname}{\textbf{Mustermann}}
+\newcommand{\PersonCoauthors}{Mustermann's co-authors}
+\newcommand{\PersonAuthors}{Mustermann et al.}
+\author{\vskip 5cm \PersonTitel{} \PersonVorname{} \PersonNachname{},  \PersonCoauthors{} \\  \texttt{max.mustermann@tum.de}}
+
+\newcommand{\LehrstuhlName}{Engineering Risk Analysis Group}
+\newcommand{\FakultaetName}{Department of Civil, Geo and Environmental Engineering}
+\newcommand{\UniversitaetName}{Technische Universität München}
+
+\newcommand{\PersonStadt}{München}
+\newcommand{\PraesentationFusszeileZusatz}{| Conference Abbreviation|}
+
+\institute[]{\vskip 0.2cm \LehrstuhlName\\ \UniversitaetName }
+\date[\Datum]{\vspace{1.5cm} \PersonStadt~- May 4th, 2017}
+\subject{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{setup.tex}          % !!! NICHT ENTFERNEN !!!
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\setlength{\baselineskip}{\PraesentationAbstandAbsatz}
+\setlength{\parskip}{\baselineskip}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\PraesentationMasterStandard
+\PraesentationTitelseite % Fügt die Startseite ein
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{slides_contents.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Kopfbereich links
+%\PraesentationMasterKopfzeileDreizeiler
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\PraesentationMasterWeissBlau
+\PraesentationStartseiteFlaggen
+%\PraesentationTitelseite % Fügt die Startseite ein
+
+\end{document}
